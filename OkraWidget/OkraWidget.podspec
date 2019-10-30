@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "beshiett" => "beshiett@okra.ng" }
   spec.platform     = :ios, "13.1"
   spec.source       = { :git => "https://github.com/okraHQ/okra-ios-sdk.git", :tag => "1.0.0" }
-  spec.source_files  = "OkraWidget/**/*"
-  spec.swift_version = "4.2"
+  spec.source_files  = "OkraWidget/**/**/*"
+  spec.swift_version = "5.1"
 
 end
