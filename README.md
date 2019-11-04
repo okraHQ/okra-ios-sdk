@@ -4,6 +4,9 @@ This is an ios library for implementing okra widget
 ### Get Started
 This library would help you add Okra widget to you native ios app in no time. All you need to do is ...
 ### Install
+```git
+$ git clone https://github.com/okraHQ/okra-ios-sdk.git
+```
 
 ### Usage
 ``` swift
