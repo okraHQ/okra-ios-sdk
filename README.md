@@ -9,7 +9,11 @@ This library would help you add Okra widget to you native ios app in no time.
 ```git
 $ git clone https://github.com/okraHQ/okra-ios-sdk.git
 ```
-2. Build and run the project via **Xcode**. 
+2. Build and run the project via **Xcode** this creates a library build named "OkraWidget.framework" in the Products folder located at the root directory. 
+
+3. Copy the file OkraWidget.framework to the root directory of the project you want to use it in.
+
+4. Go to project > General > Frameworks,Libraries, and Embedded Content and add the "OkraWidget.framework"
 
 ### Usage
 ``` swift
