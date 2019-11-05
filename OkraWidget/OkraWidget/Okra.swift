@@ -18,6 +18,7 @@ public class Okra {
         let storyboardBundle = Bundle(for:self)
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:storyboardBundle)
         if let pageTwo =  storyBoard.instantiateViewController(withIdentifier: "okraWebView") as? OkraWebView{
+            pageTwo.modalPresentationStyle = UIModalPresentationStyle.fullScreen
             pageTwo.okraOptions = okraOptions
             pageTwo.baseController = baseController;
             baseController.present(pageTwo, animated:true, completion:nil)
