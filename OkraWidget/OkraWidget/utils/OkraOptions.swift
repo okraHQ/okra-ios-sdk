@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class OkraOptions {
-    var isWebview: Bool
-    var key: String
-    var token: String
-    var products : Array<String>
-    var env: String
-    var clientName: String
-    public init(isWebview: Bool,key: String,token: String,products:Array<String>,env: String,clientName: String) {
+@objc public class OkraOptions : NSObject {
+    @objc var isWebview: Bool
+    @objc var key: String
+    @objc var token: String
+    @objc var products : Array<String>
+    @objc var env: String
+    @objc var clientName: String
+    @objc public init(isWebview: Bool,key: String,token: String,products:Array<String>,env: String,clientName: String) {
         self.isWebview = isWebview
         self.key = key
         self.token = token

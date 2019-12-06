@@ -10,11 +10,9 @@ import Foundation
 
 import UIKit
 
-public class Okra {
+@objc public class Okra :NSObject {
     
-    init() {}
-    
-    public static func create(baseController : UIViewController, okraOptions: OkraOptions ){
+    @objc public static func create(baseController : UIViewController, okraOptions: OkraOptions ){
         let storyboardBundle = Bundle(for:self)
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:storyboardBundle)
         if let pageTwo =  storyBoard.instantiateViewController(withIdentifier: "okraWebView") as? OkraWebView{
