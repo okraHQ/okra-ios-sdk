@@ -35,7 +35,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
             "key":okraOptions.key,
             "token":okraOptions.token,
             "products":convertProductArrayToString(productList: okraOptions.products),
-            "env": okraOptions.env.toString(),
+            "env": okraOptions.env,
             "clientName":okraOptions.clientName,
             "webhook":"http://requestb.in",
             "baseUrl":"https://demo-dev.okra.ng/link.html"

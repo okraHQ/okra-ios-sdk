@@ -13,9 +13,9 @@ public class OkraOptions {
     var key: String
     var token: String
     var products : Array<String>
-    var env: Environment
+    var env: String
     var clientName: String
-    public init(isWebview: Bool,key: String,token: String,products:Array<String>,env: Environment,clientName: String) {
+    public init(isWebview: Bool,key: String,token: String,products:Array<String>,env: String,clientName: String) {
         self.isWebview = isWebview
         self.key = key
         self.token = token
