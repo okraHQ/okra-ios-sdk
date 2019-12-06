@@ -1,0 +1,6 @@
+framework module OkraWidget {
+  umbrella header "OkraWidget-umbrella.h"
+
+  export *
+  module * { export * }
+}

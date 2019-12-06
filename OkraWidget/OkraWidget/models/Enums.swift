@@ -13,6 +13,6 @@ public enum Environment :String {
     case sandbox
     case staging
     case production
-    func toString() ->String { return self.rawValue }
+    public func toString() ->String { return self.rawValue }
 }
 

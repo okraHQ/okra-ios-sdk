@@ -6,28 +6,25 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		63849E33CC2BFB3E897A9FAF9DCB4731 /* OkraWidget */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 3E14DF65FDF202546EAF930906918423 /* Build configuration list for PBXAggregateTarget "OkraWidget" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = OkraWidget;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
+		1DE465FB1BA6624B770D84BF381CA221 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2437281157A06C2ABA7A52400615DD4B /* OkraWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = 587B90FC272932CC54E72F881434A3F8 /* OkraWidget.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		250882EEFF6EE5C43B5CAC5B34EA434F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		28811F5C2402F743476C6F426AA1E44D /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF4B8D989FF4BE30AC6DACF46DA2D182 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56A9FD22AF36512EB6DD06AE29942292 /* Pods-Example-ExampleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F9E2A4655D7A9550B409F67784FCD /* Pods-Example-ExampleUITests-dummy.m */; };
+		28811F5C2402F743476C6F426AA1E44D /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5CD16051A6E8F77ACC2B5EC182F497 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		329D6304CD124A8E7480A50B03FEB6F8 /* OkraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202598AD3A95D370A4898B4947A9BFF /* OkraWebView.swift */; };
+		4DE92BAB79D0E50F95D2B0C61BC8B1E1 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 9CC52C52FD28FCA66CA2CEA9554E5DAB /* Main.storyboard */; };
+		56A9FD22AF36512EB6DD06AE29942292 /* Pods-Example-ExampleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF54E9A251968F8BF102DA9BFC40597 /* Pods-Example-ExampleUITests-dummy.m */; };
+		571481ECA3083AB53D6731B7ACF5A742 /* OkraWidget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6619E5CA3B41F4F3692A73D751E40741 /* OkraWidget-dummy.m */; };
+		5BEEE160680B9E10E0C14F2C5A83EDDA /* Okra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C838FEE68D095327855AB208F79B64 /* Okra.swift */; };
 		6021EA3B61028EB8F537DC885064DFAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		6B688FEB2E44B8AAF585A112A6345BB1 /* Pods-Example-ExampleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A10D89EBD3498C00D633E4A75AB8040 /* Pods-Example-ExampleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7ABA2F28893EE56D4BFDA1E9D9B2D8B7 /* Pods-ExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50860D6D79DBB3AA8F3194E2981533C2 /* Pods-ExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		628047EBEC0AE5D5934A38A6148CF1E6 /* OkraWidget-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5014018D790F5E47D54738956BF51661 /* OkraWidget-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B688FEB2E44B8AAF585A112A6345BB1 /* Pods-Example-ExampleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2008F8A1CC62875424F7404BAF8D613C /* Pods-Example-ExampleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ABA2F28893EE56D4BFDA1E9D9B2D8B7 /* Pods-ExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81DBB735FB54499DF2C61DDED5F821C8 /* Pods-ExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		830A2D2565F9AF0C2F1D2F8450F8C29C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		861D5B26F8822EB167239B60478C9FDE /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A71EA03C24457FF079EC4CFDA6AC8 /* Pods-Example-dummy.m */; };
-		D40B0CD7725BE41DFF7CE3356ED84FB9 /* Pods-ExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E3D02D3ACC0A0CFDA0C5BA77B94C35 /* Pods-ExampleTests-dummy.m */; };
+		861D5B26F8822EB167239B60478C9FDE /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBC06CAAEF08C2C01DD809446573E3 /* Pods-Example-dummy.m */; };
+		8E23286A3F7E06AEB6AC822598D11C4E /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D83E3F3C460C0662A18DD401D643720 /* Enums.swift */; };
+		D40B0CD7725BE41DFF7CE3356ED84FB9 /* Pods-ExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4DE105D59EBDFD32F7430EDE0B2410 /* Pods-ExampleTests-dummy.m */; };
+		E3C0AB74EF5E754AA7E6CD4A8CF6FB38 /* OkraOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B79DF5E0616DDDC5B33966BD35D1C /* OkraOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,38 +52,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FE1FADC8E5543D4724C9099D244EF7B /* Pods-Example-ExampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-ExampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		18356DC4836768711B212B986FD732CF /* OkraWidget.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OkraWidget.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1A10D89EBD3498C00D633E4A75AB8040 /* Pods-Example-ExampleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-ExampleUITests-umbrella.h"; sourceTree = "<group>"; };
+		06DF40AC31BCDE82E11A89ACC5C33213 /* Pods-Example-ExampleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example-ExampleUITests.modulemap"; sourceTree = "<group>"; };
+		083C15FCF1211B5435B3E42C182E7EE3 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		168E30A406BEF02CC78C267AA5469BCF /* Pods-Example-ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B661BD8BAA70F208CC6E9465D7E0B06 /* OkraWidget.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OkraWidget.xcconfig; sourceTree = "<group>"; };
 		1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2008F8A1CC62875424F7404BAF8D613C /* Pods-Example-ExampleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-ExampleUITests-umbrella.h"; sourceTree = "<group>"; };
+		22BCA2BE4DC2A2561F9A4E949116977E /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2D83E3F3C460C0662A18DD401D643720 /* Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4445A727FA196A8B6DA507869181F3C3 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		50860D6D79DBB3AA8F3194E2981533C2 /* Pods-ExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleTests-umbrella.h"; sourceTree = "<group>"; };
-		62E1AC05FFBAE7D86BA6645E38BF0750 /* Pods-Example-ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37767CDB6517932834F2615A3E40766A /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
+		39ECFFAEE4D2F9A34763392A4E42B689 /* Pods-Example-ExampleUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-ExampleUITests-Info.plist"; sourceTree = "<group>"; };
+		4A9DFFAED89609D1BBEB26F6B9E67146 /* Pods-ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5014018D790F5E47D54738956BF51661 /* OkraWidget-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OkraWidget-umbrella.h"; sourceTree = "<group>"; };
+		530F21C6E342F9FF4BA0F352E7F34B4C /* OkraWidget-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OkraWidget-prefix.pch"; sourceTree = "<group>"; };
+		587B90FC272932CC54E72F881434A3F8 /* OkraWidget.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OkraWidget.h; path = OkraWidget/OkraWidget.h; sourceTree = "<group>"; };
 		630CABE8F692FCDBFD1B122A2D0CE388 /* Pods_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExampleTests.framework; path = "Pods-ExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		653E5C88D1562EDDCBD57CB597546538 /* Pods-Example-ExampleUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-ExampleUITests-Info.plist"; sourceTree = "<group>"; };
-		6C7F9E2A4655D7A9550B409F67784FCD /* Pods-Example-ExampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-ExampleUITests-dummy.m"; sourceTree = "<group>"; };
-		6FE09F63C8FE545E143144EB53455C00 /* Pods-ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		73B845148FD46EE6C3A1B84422CC2199 /* Pods-ExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleTests-Info.plist"; sourceTree = "<group>"; };
-		7D1AEB2262857554DA4015194034C61A /* Pods-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7E8A71EA03C24457FF079EC4CFDA6AC8 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
-		803067310A1EF4CCBC35DC643B2B525B /* Pods-Example-ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		958CA2BF07D35A0EBD6CFAC2C0FFE2DF /* Pods-Example-ExampleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example-ExampleUITests.modulemap"; sourceTree = "<group>"; };
+		65054D976DC0CD626FCA2E2CEC8E1A25 /* Pods-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6619E5CA3B41F4F3692A73D751E40741 /* OkraWidget-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OkraWidget-dummy.m"; sourceTree = "<group>"; };
+		6B5CBCD908C73EFCED61BD98460F05EF /* Pods-Example-ExampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-ExampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		80C838FEE68D095327855AB208F79B64 /* Okra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Okra.swift; path = OkraWidget/Okra.swift; sourceTree = "<group>"; };
+		81DBB735FB54499DF2C61DDED5F821C8 /* Pods-ExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleTests-umbrella.h"; sourceTree = "<group>"; };
+		87DD8A63239A453A43357AA8F551B855 /* OkraWidget.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OkraWidget.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8AAFFFF03FE7D0FCEA61724821452BED /* Pods-ExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleTests-Info.plist"; sourceTree = "<group>"; };
+		8DF54E9A251968F8BF102DA9BFC40597 /* Pods-Example-ExampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-ExampleUITests-dummy.m"; sourceTree = "<group>"; };
+		8F44706E4B57CF36D06A180BB27F867C /* Pods-ExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ExampleTests.modulemap"; sourceTree = "<group>"; };
+		9CC52C52FD28FCA66CA2CEA9554E5DAB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Main.storyboard; path = OkraWidget/Main.storyboard; sourceTree = "<group>"; };
+		9D5CD16051A6E8F77ACC2B5EC182F497 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3A1D724A6EB1F283C653E66953261C4 /* OkraWidget.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OkraWidget.h; path = OkraWidget/OkraWidget.h; sourceTree = "<group>"; };
-		A9D34CB0D8E5E357C59B5F15F320C9E2 /* Pods-ExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ExampleTests.modulemap"; sourceTree = "<group>"; };
-		B4E3D02D3ACC0A0CFDA0C5BA77B94C35 /* Pods-ExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleTests-dummy.m"; sourceTree = "<group>"; };
-		B9B831BC5EBA572871781FBA6BA87799 /* OkraWidget.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OkraWidget.xcconfig; sourceTree = "<group>"; };
-		BE89786B13874BF3EBE4B66E935C2E29 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		CD4795C83680BE5F0E9E2F77D04AAC26 /* Pods-Example-ExampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-ExampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D3875389B2301E83CCCA0D7F09A31082 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D6C7C5C730CE16B35B9400D7B7A91D85 /* Pods-ExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D86FFE93EE735F7B9AAAADCAF048A465 /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		DE168E4DEF6B3C477A41A6BFF34529D8 /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
+		9EA58EE79CC4D88518DC24C54D8A994F /* OkraWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OkraWidget.framework; path = OkraWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE6B79DF5E0616DDDC5B33966BD35D1C /* OkraOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OkraOptions.swift; sourceTree = "<group>"; };
+		B4A31CBB45DDDEBA8FA40982BEC6791E /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BD5DBD8D64FF5CADE2D5E9020AC9BDBE /* OkraWidget.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OkraWidget.modulemap; sourceTree = "<group>"; };
+		C54078A65F1E57154BA0DF9535462C54 /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C76DBA82F3C8C9A64649832FAF9D1864 /* OkraWidget-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OkraWidget-Info.plist"; sourceTree = "<group>"; };
+		CA86459B834B286D472EF909A2AAD76D /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D01F4C7BCBE74F68C0C06788351AB25D /* Pods-Example-ExampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-ExampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D0C2C30C622762D8C6870F740EB57F61 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		D4FE8F3E50AE4C4BB91C118C55D7CAFB /* Pods-ExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E5A8990B6200C07FBCB436D4F7700B41 /* Pods-Example-ExampleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-ExampleUITests-frameworks.sh"; sourceTree = "<group>"; };
 		E8E5A2DDEE01CA7716145CA1B033B7A3 /* Pods_Example_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_ExampleUITests.framework; path = "Pods-Example-ExampleUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED4AA5D53F43B489A2BF3890E92803B8 /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F5B01F20F2197B82F0E552498E844848 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
-		FF4B8D989FF4BE30AC6DACF46DA2D182 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
+		EC4DE105D59EBDFD32F7430EDE0B2410 /* Pods-ExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleTests-dummy.m"; sourceTree = "<group>"; };
+		EDF1B691258C4A37532DD7BC9E5588F0 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		F202598AD3A95D370A4898B4947A9BFF /* OkraWebView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OkraWebView.swift; path = OkraWidget/OkraWebView.swift; sourceTree = "<group>"; };
+		F8FBC06CAAEF08C2C01DD809446573E3 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		FE701A3C3F479432B9ACCD94B36B4F83 /* Pods-Example-ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				250882EEFF6EE5C43B5CAC5B34EA434F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9BCEF5026A6EDA9FD4E611FCFFCE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE465FB1BA6624B770D84BF381CA221 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,75 +135,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3596B40933B9D5CFB2FD46345F633EC0 /* Pods-ExampleTests */ = {
+		33B992282BABCE2EC047F1F031E040AC /* OkraWidget */ = {
 			isa = PBXGroup;
 			children = (
-				A9D34CB0D8E5E357C59B5F15F320C9E2 /* Pods-ExampleTests.modulemap */,
-				6FE09F63C8FE545E143144EB53455C00 /* Pods-ExampleTests-acknowledgements.markdown */,
-				D6C7C5C730CE16B35B9400D7B7A91D85 /* Pods-ExampleTests-acknowledgements.plist */,
-				B4E3D02D3ACC0A0CFDA0C5BA77B94C35 /* Pods-ExampleTests-dummy.m */,
-				73B845148FD46EE6C3A1B84422CC2199 /* Pods-ExampleTests-Info.plist */,
-				50860D6D79DBB3AA8F3194E2981533C2 /* Pods-ExampleTests-umbrella.h */,
-				7D1AEB2262857554DA4015194034C61A /* Pods-ExampleTests.debug.xcconfig */,
-				D86FFE93EE735F7B9AAAADCAF048A465 /* Pods-ExampleTests.release.xcconfig */,
+				9CC52C52FD28FCA66CA2CEA9554E5DAB /* Main.storyboard */,
+				80C838FEE68D095327855AB208F79B64 /* Okra.swift */,
+				F202598AD3A95D370A4898B4947A9BFF /* OkraWebView.swift */,
+				587B90FC272932CC54E72F881434A3F8 /* OkraWidget.h */,
+				ECC08F657891CE17CA6808F3033F9885 /* models */,
+				B5F4E6FB7F8DCC2EFC90919CC84971A9 /* Pod */,
+				6AB52CF559DCF3364799D3B3DBA5BEC9 /* Support Files */,
+				F058FD730C63EBD261AA5E7F7B9495C3 /* utils */,
 			);
-			name = "Pods-ExampleTests";
-			path = "Target Support Files/Pods-ExampleTests";
+			name = OkraWidget;
+			path = ../../OkraWidget;
 			sourceTree = "<group>";
 		};
-		43671BC8431141CAFD559CDE878CC597 /* Pod */ = {
+		37E8A2E8A3400ADC0901103DCD66DA8F /* Pods-Example-ExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				18356DC4836768711B212B986FD732CF /* OkraWidget.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		5EA6EADCE590579EED93ADC51D605473 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8D940B4848C96AD940DBCB69892F5364 /* Pods-Example */,
-				61256902457D5A3A7CDD5BD800A455E6 /* Pods-Example-ExampleUITests */,
-				3596B40933B9D5CFB2FD46345F633EC0 /* Pods-ExampleTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		61256902457D5A3A7CDD5BD800A455E6 /* Pods-Example-ExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				958CA2BF07D35A0EBD6CFAC2C0FFE2DF /* Pods-Example-ExampleUITests.modulemap */,
-				CD4795C83680BE5F0E9E2F77D04AAC26 /* Pods-Example-ExampleUITests-acknowledgements.markdown */,
-				0FE1FADC8E5543D4724C9099D244EF7B /* Pods-Example-ExampleUITests-acknowledgements.plist */,
-				6C7F9E2A4655D7A9550B409F67784FCD /* Pods-Example-ExampleUITests-dummy.m */,
-				653E5C88D1562EDDCBD57CB597546538 /* Pods-Example-ExampleUITests-Info.plist */,
-				1A10D89EBD3498C00D633E4A75AB8040 /* Pods-Example-ExampleUITests-umbrella.h */,
-				62E1AC05FFBAE7D86BA6645E38BF0750 /* Pods-Example-ExampleUITests.debug.xcconfig */,
-				803067310A1EF4CCBC35DC643B2B525B /* Pods-Example-ExampleUITests.release.xcconfig */,
+				06DF40AC31BCDE82E11A89ACC5C33213 /* Pods-Example-ExampleUITests.modulemap */,
+				6B5CBCD908C73EFCED61BD98460F05EF /* Pods-Example-ExampleUITests-acknowledgements.markdown */,
+				D01F4C7BCBE74F68C0C06788351AB25D /* Pods-Example-ExampleUITests-acknowledgements.plist */,
+				8DF54E9A251968F8BF102DA9BFC40597 /* Pods-Example-ExampleUITests-dummy.m */,
+				E5A8990B6200C07FBCB436D4F7700B41 /* Pods-Example-ExampleUITests-frameworks.sh */,
+				39ECFFAEE4D2F9A34763392A4E42B689 /* Pods-Example-ExampleUITests-Info.plist */,
+				2008F8A1CC62875424F7404BAF8D613C /* Pods-Example-ExampleUITests-umbrella.h */,
+				168E30A406BEF02CC78C267AA5469BCF /* Pods-Example-ExampleUITests.debug.xcconfig */,
+				FE701A3C3F479432B9ACCD94B36B4F83 /* Pods-Example-ExampleUITests.release.xcconfig */,
 			);
 			name = "Pods-Example-ExampleUITests";
 			path = "Target Support Files/Pods-Example-ExampleUITests";
 			sourceTree = "<group>";
 		};
-		8D940B4848C96AD940DBCB69892F5364 /* Pods-Example */ = {
+		3B6075513810D4D46595EA1B8AA9E4A8 /* Pods-ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				F5B01F20F2197B82F0E552498E844848 /* Pods-Example.modulemap */,
-				ED4AA5D53F43B489A2BF3890E92803B8 /* Pods-Example-acknowledgements.markdown */,
-				4445A727FA196A8B6DA507869181F3C3 /* Pods-Example-acknowledgements.plist */,
-				7E8A71EA03C24457FF079EC4CFDA6AC8 /* Pods-Example-dummy.m */,
-				DE168E4DEF6B3C477A41A6BFF34529D8 /* Pods-Example-Info.plist */,
-				FF4B8D989FF4BE30AC6DACF46DA2D182 /* Pods-Example-umbrella.h */,
-				D3875389B2301E83CCCA0D7F09A31082 /* Pods-Example.debug.xcconfig */,
-				BE89786B13874BF3EBE4B66E935C2E29 /* Pods-Example.release.xcconfig */,
+				8F44706E4B57CF36D06A180BB27F867C /* Pods-ExampleTests.modulemap */,
+				4A9DFFAED89609D1BBEB26F6B9E67146 /* Pods-ExampleTests-acknowledgements.markdown */,
+				D4FE8F3E50AE4C4BB91C118C55D7CAFB /* Pods-ExampleTests-acknowledgements.plist */,
+				EC4DE105D59EBDFD32F7430EDE0B2410 /* Pods-ExampleTests-dummy.m */,
+				8AAFFFF03FE7D0FCEA61724821452BED /* Pods-ExampleTests-Info.plist */,
+				81DBB735FB54499DF2C61DDED5F821C8 /* Pods-ExampleTests-umbrella.h */,
+				65054D976DC0CD626FCA2E2CEC8E1A25 /* Pods-ExampleTests.debug.xcconfig */,
+				C54078A65F1E57154BA0DF9535462C54 /* Pods-ExampleTests.release.xcconfig */,
 			);
-			name = "Pods-Example";
-			path = "Target Support Files/Pods-Example";
+			name = "Pods-ExampleTests";
+			path = "Target Support Files/Pods-ExampleTests";
 			sourceTree = "<group>";
 		};
-		9EB1BC7693992DAB96D0603453933D10 /* Products */ = {
+		6AB52CF559DCF3364799D3B3DBA5BEC9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				BD5DBD8D64FF5CADE2D5E9020AC9BDBE /* OkraWidget.modulemap */,
+				1B661BD8BAA70F208CC6E9465D7E0B06 /* OkraWidget.xcconfig */,
+				6619E5CA3B41F4F3692A73D751E40741 /* OkraWidget-dummy.m */,
+				C76DBA82F3C8C9A64649832FAF9D1864 /* OkraWidget-Info.plist */,
+				530F21C6E342F9FF4BA0F352E7F34B4C /* OkraWidget-prefix.pch */,
+				5014018D790F5E47D54738956BF51661 /* OkraWidget-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Example/Pods/Target Support Files/OkraWidget";
+			sourceTree = "<group>";
+		};
+		6F90D6A3CA53BA1D8F91864540CF2EF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EA58EE79CC4D88518DC24C54D8A994F /* OkraWidget.framework */,
 				1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */,
 				E8E5A2DDEE01CA7716145CA1B033B7A3 /* Pods_Example_ExampleUITests.framework */,
 				630CABE8F692FCDBFD1B122A2D0CE388 /* Pods_ExampleTests.framework */,
@@ -193,23 +209,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9F43CC82B33752F33A21EF4CD5C65209 /* Development Pods */ = {
+		744EE5B2C2BCD8717193D237DC620516 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BECD2109672ACFD8D6BF652AFB0FFB03 /* OkraWidget */,
+				EBE7EEC219B31D2547DFFD6C6A2E9D63 /* Pods-Example */,
+				37E8A2E8A3400ADC0901103DCD66DA8F /* Pods-Example-ExampleUITests */,
+				3B6075513810D4D46595EA1B8AA9E4A8 /* Pods-ExampleTests */,
 			);
-			name = "Development Pods";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BECD2109672ACFD8D6BF652AFB0FFB03 /* OkraWidget */ = {
+		B5F4E6FB7F8DCC2EFC90919CC84971A9 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				A3A1D724A6EB1F283C653E66953261C4 /* OkraWidget.h */,
-				43671BC8431141CAFD559CDE878CC597 /* Pod */,
-				E84444EBE438FBC02C08406673379970 /* Support Files */,
+				87DD8A63239A453A43357AA8F551B855 /* OkraWidget.podspec */,
 			);
-			name = OkraWidget;
-			path = ../../OkraWidget;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -224,11 +239,19 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				9F43CC82B33752F33A21EF4CD5C65209 /* Development Pods */,
+				D1ECC96C829AB8013228884133134565 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				9EB1BC7693992DAB96D0603453933D10 /* Products */,
-				5EA6EADCE590579EED93ADC51D605473 /* Targets Support Files */,
+				6F90D6A3CA53BA1D8F91864540CF2EF3 /* Products */,
+				744EE5B2C2BCD8717193D237DC620516 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D1ECC96C829AB8013228884133134565 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33B992282BABCE2EC047F1F031E040AC /* OkraWidget */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -239,13 +262,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E84444EBE438FBC02C08406673379970 /* Support Files */ = {
+		EBE7EEC219B31D2547DFFD6C6A2E9D63 /* Pods-Example */ = {
 			isa = PBXGroup;
 			children = (
-				B9B831BC5EBA572871781FBA6BA87799 /* OkraWidget.xcconfig */,
+				083C15FCF1211B5435B3E42C182E7EE3 /* Pods-Example.modulemap */,
+				22BCA2BE4DC2A2561F9A4E949116977E /* Pods-Example-acknowledgements.markdown */,
+				B4A31CBB45DDDEBA8FA40982BEC6791E /* Pods-Example-acknowledgements.plist */,
+				F8FBC06CAAEF08C2C01DD809446573E3 /* Pods-Example-dummy.m */,
+				EDF1B691258C4A37532DD7BC9E5588F0 /* Pods-Example-frameworks.sh */,
+				37767CDB6517932834F2615A3E40766A /* Pods-Example-Info.plist */,
+				9D5CD16051A6E8F77ACC2B5EC182F497 /* Pods-Example-umbrella.h */,
+				CA86459B834B286D472EF909A2AAD76D /* Pods-Example.debug.xcconfig */,
+				D0C2C30C622762D8C6870F740EB57F61 /* Pods-Example.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "../Example/Pods/Target Support Files/OkraWidget";
+			name = "Pods-Example";
+			path = "Target Support Files/Pods-Example";
+			sourceTree = "<group>";
+		};
+		ECC08F657891CE17CA6808F3033F9885 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2D83E3F3C460C0662A18DD401D643720 /* Enums.swift */,
+			);
+			name = models;
+			path = OkraWidget/models;
+			sourceTree = "<group>";
+		};
+		F058FD730C63EBD261AA5E7F7B9495C3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				AE6B79DF5E0616DDDC5B33966BD35D1C /* OkraOptions.swift */,
+			);
+			name = utils;
+			path = OkraWidget/utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +313,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ABA2F28893EE56D4BFDA1E9D9B2D8B7 /* Pods-ExampleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB02B81797C62349B9C15F8677C2568 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628047EBEC0AE5D5934A38A6148CF1E6 /* OkraWidget-umbrella.h in Headers */,
+				2437281157A06C2ABA7A52400615DD4B /* OkraWidget.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +374,24 @@
 			productReference = 630CABE8F692FCDBFD1B122A2D0CE388 /* Pods_ExampleTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		63849E33CC2BFB3E897A9FAF9DCB4731 /* OkraWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D08361B144784D30E38DE6903389712 /* Build configuration list for PBXNativeTarget "OkraWidget" */;
+			buildPhases = (
+				4DB02B81797C62349B9C15F8677C2568 /* Headers */,
+				D16888D0DB2BD3172AED8ECA1B1E48AF /* Sources */,
+				CC9BCEF5026A6EDA9FD4E611FCFFCE76 /* Frameworks */,
+				A55924334C4532D55BB143F74A3BC9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OkraWidget;
+			productName = OkraWidget;
+			productReference = 9EA58EE79CC4D88518DC24C54D8A994F /* OkraWidget.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		B9DFC814891157FDF2E53F5761A99BA6 /* Pods-Example-ExampleUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD2503025742722A31B0DC3A6B4E6EA8 /* Build configuration list for PBXNativeTarget "Pods-Example-ExampleUITests" */;
@@ -353,7 +429,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9EB1BC7693992DAB96D0603453933D10 /* Products */;
+			productRefGroup = 6F90D6A3CA53BA1D8F91864540CF2EF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -374,6 +450,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9E1851F481EF2DA512A6604B0894CF76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55924334C4532D55BB143F74A3BC9C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,6 +486,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D40B0CD7725BE41DFF7CE3356ED84FB9 /* Pods-ExampleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D16888D0DB2BD3172AED8ECA1B1E48AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E23286A3F7E06AEB6AC822598D11C4E /* Enums.swift in Sources */,
+				4DE92BAB79D0E50F95D2B0C61BC8B1E1 /* Main.storyboard in Sources */,
+				5BEEE160680B9E10E0C14F2C5A83EDDA /* Okra.swift in Sources */,
+				E3C0AB74EF5E754AA7E6CD4A8CF6FB38 /* OkraOptions.swift in Sources */,
+				329D6304CD124A8E7480A50B03FEB6F8 /* OkraWebView.swift in Sources */,
+				571481ECA3083AB53D6731B7ACF5A742 /* OkraWidget-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +536,7 @@
 /* Begin XCBuildConfiguration section */
 		4FED36AE106E2D65E178AB766B049270 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D1AEB2262857554DA4015194034C61A /* Pods-ExampleTests.debug.xcconfig */;
+			baseConfigurationReference = 65054D976DC0CD626FCA2E2CEC8E1A25 /* Pods-ExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -478,7 +574,7 @@
 		};
 		8683933FBAC77BF00A674136D571D9D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3875389B2301E83CCCA0D7F09A31082 /* Pods-Example.debug.xcconfig */;
+			baseConfigurationReference = CA86459B834B286D472EF909A2AAD76D /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -580,7 +676,7 @@
 		};
 		A6C8A307C8D2D45FF36DAB49DAC1497D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D86FFE93EE735F7B9AAAADCAF048A465 /* Pods-ExampleTests.release.xcconfig */;
+			baseConfigurationReference = C54078A65F1E57154BA0DF9535462C54 /* Pods-ExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -619,7 +715,7 @@
 		};
 		A6FCB6FB10D94D67B347E4E87E50276D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62E1AC05FFBAE7D86BA6645E38BF0750 /* Pods-Example-ExampleUITests.debug.xcconfig */;
+			baseConfigurationReference = 168E30A406BEF02CC78C267AA5469BCF /* Pods-Example-ExampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -655,40 +751,78 @@
 			};
 			name = Debug;
 		};
-		B1C184B472A5E7BE8B53DBABB2C03744 /* Debug */ = {
+		AA232C0A6B54E8A078142F0118C6E000 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9B831BC5EBA572871781FBA6BA87799 /* OkraWidget.xcconfig */;
+			baseConfigurationReference = 1B661BD8BAA70F208CC6E9465D7E0B06 /* OkraWidget.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OkraWidget/OkraWidget-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OkraWidget/OkraWidget-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "Target Support Files/OkraWidget/OkraWidget.modulemap";
+				PRODUCT_MODULE_NAME = OkraWidget;
+				PRODUCT_NAME = OkraWidget;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E324DEFF137E57EE9B7EDC603E7D2A0A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9B831BC5EBA572871781FBA6BA87799 /* OkraWidget.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		DE93045428071CC54BB3BEA85367A997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B661BD8BAA70F208CC6E9465D7E0B06 /* OkraWidget.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OkraWidget/OkraWidget-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OkraWidget/OkraWidget-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/OkraWidget/OkraWidget.modulemap";
+				PRODUCT_MODULE_NAME = OkraWidget;
+				PRODUCT_NAME = OkraWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -752,7 +886,7 @@
 		};
 		EF2E76E399B2FA7ABDBB38999B0DA2C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 803067310A1EF4CCBC35DC643B2B525B /* Pods-Example-ExampleUITests.release.xcconfig */;
+			baseConfigurationReference = FE701A3C3F479432B9ACCD94B36B4F83 /* Pods-Example-ExampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -791,7 +925,7 @@
 		};
 		F7A3041C17EF1B9AB335BB92FC438107 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE89786B13874BF3EBE4B66E935C2E29 /* Pods-Example.release.xcconfig */;
+			baseConfigurationReference = D0C2C30C622762D8C6870F740EB57F61 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -831,11 +965,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E14DF65FDF202546EAF930906918423 /* Build configuration list for PBXAggregateTarget "OkraWidget" */ = {
+		0D08361B144784D30E38DE6903389712 /* Build configuration list for PBXNativeTarget "OkraWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1C184B472A5E7BE8B53DBABB2C03744 /* Debug */,
-				E324DEFF137E57EE9B7EDC603E7D2A0A /* Release */,
+				DE93045428071CC54BB3BEA85367A997 /* Debug */,
+				AA232C0A6B54E8A078142F0118C6E000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

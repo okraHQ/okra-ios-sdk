@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "63849E33CC2BFB3E897A9FAF9DCB4731"
-               BuildableName = "OkraWidget"
+               BuildableName = "OkraWidget.framework"
                BlueprintName = "OkraWidget"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
