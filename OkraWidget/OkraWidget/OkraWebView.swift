@@ -34,6 +34,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
             "isWebview": String(okraOptions.isWebview),
             "key":okraOptions.key,
             "token":okraOptions.token,
+            "source":"ios",
             "products":convertProductArrayToString(productList: okraOptions.products),
             "env": okraOptions.env,
             "clientName":okraOptions.clientName,
