@@ -1,0 +1,11 @@
+framework module OkraWidget {
+  umbrella header "OkraWidget.h"
+
+  export *
+  module * { export * }
+}
+
+module OkraWidget.Swift {
+    header "OkraWidget-Swift.h"
+    requires objc
+}

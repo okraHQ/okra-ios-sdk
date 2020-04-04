@@ -81,7 +81,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
         urlComponents.scheme = "https"
         urlComponents.host = "app.okra.ng"
         //urlComponents.port = 3000
-        urlComponents.path = "/link.html"
+        urlComponents.path = "/"
         urlComponents.queryItems = []
         
         for (_, item) in options.enumerated(){
