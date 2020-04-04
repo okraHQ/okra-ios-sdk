@@ -79,7 +79,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
-        urlComponents.host = "demo-dev.okra.ng"
+        urlComponents.host = "app.okra.ng"
         //urlComponents.port = 3000
         urlComponents.path = "/link.html"
         urlComponents.queryItems = []
@@ -88,12 +88,10 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
             if(item.key != "baseUrl"){
                 if(item.key != "webhook"){
                     let queryItem = URLQueryItem(name: item.key, value: item.value);
-                    print("\(item.value) /n")
                     urlComponents.queryItems?.append(queryItem)
                 }
             }
         }
-        print("this is the full url \(urlComponents.url!)")
         return urlComponents.url!;
     }
     
