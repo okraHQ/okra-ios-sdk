@@ -45,6 +45,15 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
         
         let request = URLRequest(url: formatUrl(options: linkOptions))
         web.load(request)
+        web.addObserver(self, forKeyPath: "URL", options: .new, context: nil)
+    }
+    
+
+    // Observe value
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let key = change?[NSKeyValueChangeKey.newKey] {
+            switchToPreviousPage();
+        }
     }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
