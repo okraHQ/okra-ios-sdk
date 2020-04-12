@@ -62,8 +62,6 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
             OkraHandler.data = message.body as! String;
             OkraHandler.isSuccessful = true;
             OkraHandler.isDone = true;
-            print(OkraHandler.isDone)
-            print(OkraHandler.data)
             switchToPreviousPage();
         }else{
             print(message.name)
