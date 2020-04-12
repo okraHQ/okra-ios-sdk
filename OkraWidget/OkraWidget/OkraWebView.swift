@@ -24,7 +24,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
     
     override func loadView() {
         super.loadView()
-        web.configuration.userContentController.add(self, name: "callbackHandler")
+        web.configuration.userContentController.add(self, name: "jsMessageHandler")
     }
     
     override func viewDidLoad() {
@@ -57,7 +57,11 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
     }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if(message.name == "callbackHandler") {
+        if(message.name == "jsMessageHandler") {
+            print(message.body)
+            OkraHandler.data = message.body as! String;
+            OkraHandler.isSuccessful = true;
+            OkraHandler.isDone = true;
             switchToPreviousPage();
         }
     }
