@@ -6,8 +6,6 @@
 //  Copyright © 2019 okra inc. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 import WebKit
 
@@ -33,14 +31,14 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
         
         linkOptions = [
             "isWebview": String(okraOptions.isWebview),
-            "key":okraOptions.key,
-            "token":okraOptions.token,
-            "source":"ios",
-            "products":convertProductArrayToString(productList: okraOptions.products),
+            "key": okraOptions.key,
+            "token": okraOptions.token,
+            "source": "ios",
+            "products": convertProductArrayToString(productList: okraOptions.products),
             "env": okraOptions.env,
-            "clientName":okraOptions.clientName,
-            "webhook":"http://requestb.in",
-            "baseUrl":"https://demo-dev.okra.ng/link.html"
+            "clientName": okraOptions.clientName,
+            "webhook": "http://requestb.in",
+            "baseUrl": "https://demo-dev.okra.ng/link.html"
         ]
         
         
@@ -52,7 +50,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
 
     // Observe value
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if let key = change?[NSKeyValueChangeKey.newKey] {
+        if let _ = change?[NSKeyValueChangeKey.newKey] {
             switchToPreviousPage();
         }
     }
@@ -65,16 +63,16 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
             print(OkraHandler.isDone)
             print(OkraHandler.data)
             switchToPreviousPage();
-        }else{
+        } else {
             print(message.name)
         }
     }
     
-    func switchToPreviousPage(){
-        self.dismiss(animated: true, completion: nil)
+    func switchToPreviousPage() {
+        dismiss(animated: true, completion: nil)
     }
     
-    func convertProductArrayToString(productList: Array<String>) -> String{
+    func convertProductArrayToString(productList: [String]) -> String {
         
         var formattedArray = "[";
         
@@ -91,7 +89,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
     }
     
     
-    func formatUrl(options: [String: String]) -> URL{
+    func formatUrl(options: [String: String]) -> URL {
         
         
         var urlComponents = URLComponents()
@@ -99,16 +97,10 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
         urlComponents.host = "app.okra.ng"
         //urlComponents.port = 3000
         urlComponents.path = "/"
-        urlComponents.queryItems = []
+        urlComponents.queryItems = options
+            .filter { (item) in item.key != "baseUrl" || item.key != "webhook" }
+            .map { (key, value) in URLQueryItem(name: key, value: value) }
         
-        for (_, item) in options.enumerated(){
-            if(item.key != "baseUrl"){
-                if(item.key != "webhook"){
-                    let queryItem = URLQueryItem(name: item.key, value: item.value);
-                    urlComponents.queryItems?.append(queryItem)
-                }
-            }
-        }
         return urlComponents.url!;
     }
     
