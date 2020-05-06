@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 import WebKit
 
-class OkraWebView: UIViewController, WKScriptMessageHandler {
+class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegate {
     
     public var okraOptions: OkraOptions!
     
@@ -31,24 +31,22 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        linkOptions = [
-            "isWebview": String(okraOptions.isWebview),
-            "key":okraOptions.key,
-            "token":okraOptions.token,
-            "source":"ios",
-            "products":convertProductArrayToString(productList: okraOptions.products),
-            "env": okraOptions.env,
-            "clientName":okraOptions.clientName,
-            "webhook":"http://requestb.in",
-            "baseUrl":"https://demo-dev.okra.ng/link.html"
-        ]
-        
-        
-        let request = URLRequest(url: formatUrl(options: linkOptions))
+        let request = URLRequest(url: formatUrl())
         web.load(request)
+        web.navigationDelegate = self
         web.addObserver(self, forKeyPath: "URL", options: .new, context: nil)
     }
     
+    func webView(_ webView: WKWebView, didFinish  navigation: WKNavigation!)
+    {
+        do{
+            let okraOptionsEncoded = okraOptions.encode()
+            let jsonEncoder = JSONEncoder()
+            let jsonData = try jsonEncoder.encode(okraOptionsEncoded)
+            let json = String(data: jsonData, encoding: String.Encoding.utf8)
+            web.evaluateJavaScript("openOkraWidget('"+json!+"')", completionHandler: { (object,error) in})
+        }catch{}
+    }
 
     // Observe value
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -63,8 +61,11 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
             OkraHandler.isSuccessful = true;
             OkraHandler.isDone = true;
             switchToPreviousPage();
-        }else{
-            print(message.name)
+        }else if(message.name == "jsErrorMessageHandler"){
+            OkraHandler.data = message.body as! String;
+            OkraHandler.hasError = true;
+            OkraHandler.isDone = true;
+            switchToPreviousPage();
         }
     }
     
@@ -72,43 +73,12 @@ class OkraWebView: UIViewController, WKScriptMessageHandler {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func convertProductArrayToString(productList: Array<String>) -> String{
-        
-        var formattedArray = "[";
-        
-        for (index, name) in productList.enumerated(){
-            if(index == (productList.count - 1)){
-                formattedArray.append("\"\(name)\"")
-            }else{
-                formattedArray.append("\"\(name)\",")
-            }
-        }
-        formattedArray.append("]")
-        
-        return formattedArray;
-    }
-    
-    
-    func formatUrl(options: [String: String]) -> URL{
-        
-        
+    func formatUrl() -> URL{
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
-        urlComponents.host = "app.okra.ng"
-        //urlComponents.port = 3000
+        urlComponents.host = "mobile.okra.ng"
         urlComponents.path = "/"
-        urlComponents.queryItems = []
-        
-        for (_, item) in options.enumerated(){
-            if(item.key != "baseUrl"){
-                if(item.key != "webhook"){
-                    let queryItem = URLQueryItem(name: item.key, value: item.value);
-                    urlComponents.queryItems?.append(queryItem)
-                }
-            }
-        }
         return urlComponents.url!;
     }
-    
 }
 
