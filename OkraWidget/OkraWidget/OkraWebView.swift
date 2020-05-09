@@ -26,6 +26,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
         super.loadView()
         web.configuration.userContentController.add(self, name: "jsMessageHandler")
         web.configuration.userContentController.add(self, name: "jsErrorMessageHandler")
+        web.configuration.userContentController.add(self, name: "jsCloseMessageHandler")
     }
     
     override func viewDidLoad() {
@@ -49,24 +50,24 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     }
 
     // Observe value
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if let key = change?[NSKeyValueChangeKey.newKey] {
-            switchToPreviousPage();
-        }
-    }
-    
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if let key = change?[NSKeyValueChangeKey.newKey] {
+//            switchToPreviousPage();
+//        }
+//    }
+//
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if(message.name == "jsMessageHandler") {
-            OkraHandler.data = message.body as! String;
-            OkraHandler.isSuccessful = true;
-            OkraHandler.isDone = true;
-            switchToPreviousPage();
+              NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onSuccess"), object: ["data": message.body as! String])
+            
+            
         }else if(message.name == "jsErrorMessageHandler"){
-            OkraHandler.data = message.body as! String;
-            OkraHandler.hasError = true;
-            OkraHandler.isDone = true;
-            switchToPreviousPage();
+             NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onError"), object: ["data": message.body as! String])
+            
+        }else if(message.name == "jsCloseMessageHandler"){
+             NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onClose"), object: ["data": message.body as! String])
         }
+        switchToPreviousPage();
     }
     
     func switchToPreviousPage(){
