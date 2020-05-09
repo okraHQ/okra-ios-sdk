@@ -35,7 +35,6 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
         let request = URLRequest(url: formatUrl())
         web.load(request)
         web.navigationDelegate = self
-        web.addObserver(self, forKeyPath: "URL", options: .new, context: nil)
     }
     
     func webView(_ webView: WKWebView, didFinish  navigation: WKNavigation!)
@@ -49,13 +48,6 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
         }catch{}
     }
 
-    // Observe value
-//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//        if let key = change?[NSKeyValueChangeKey.newKey] {
-//            switchToPreviousPage();
-//        }
-//    }
-//
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if(message.name == "jsMessageHandler") {
               NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onSuccess"), object: ["data": message.body as! String])
