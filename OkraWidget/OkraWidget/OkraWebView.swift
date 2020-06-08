@@ -48,14 +48,14 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if(message.name == "jsMessageHandler") {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onSuccess"), object: ["data": message.body as! String])
+              NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onSuccess"), object: ["data": message.body as! String])
             
             
         }else if(message.name == "jsErrorMessageHandler"){
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onError"), object: ["data": message.body as! String])
+             NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onError"), object: ["data": message.body as! String])
             
         }else if(message.name == "jsCloseMessageHandler"){
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onClose"), object: ["data": message.body as! String])
+             NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onClose"), object: ["data": message.body as! String])
         }
         switchToPreviousPage();
     }
