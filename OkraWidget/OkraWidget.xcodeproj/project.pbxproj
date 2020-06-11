@@ -7,23 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D75BEC92443679400C671B2 /* OkraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75BEC82443679400C671B2 /* OkraHandler.swift */; };
-		5DA7CD132461C7430055C3E8 /* Guarantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA7CD122461C7430055C3E8 /* Guarantor.swift */; };
-		5DA7CD152462556B0055C3E8 /* OkraOptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA7CD142462556B0055C3E8 /* OkraOptionParser.swift */; };
-		5DA7CD172462B6180055C3E8 /* GuarantorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA7CD162462B6180055C3E8 /* GuarantorParser.swift */; };
 		D1A35A59235623550057DD56 /* OkraWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A35A57235623550057DD56 /* OkraWidget.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1A35A62235628510057DD56 /* Okra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A35A61235628510057DD56 /* Okra.swift */; };
 		D1A35A652356289D0057DD56 /* OkraOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A35A642356289D0057DD56 /* OkraOptions.swift */; };
 		D1A35A68235628D70057DD56 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A35A67235628D70057DD56 /* Enums.swift */; };
 		D1A35A6A235629300057DD56 /* OkraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A35A69235629300057DD56 /* OkraWebView.swift */; };
 		D1A35A6C2356296A0057DD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A35A6B2356296A0057DD56 /* Main.storyboard */; };
+		FC0C353624581F1C000100BA /* OkraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C353524581F1C000100BA /* OkraHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D75BEC82443679400C671B2 /* OkraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkraHandler.swift; sourceTree = "<group>"; };
-		5DA7CD122461C7430055C3E8 /* Guarantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guarantor.swift; sourceTree = "<group>"; };
-		5DA7CD142462556B0055C3E8 /* OkraOptionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkraOptionParser.swift; sourceTree = "<group>"; };
-		5DA7CD162462B6180055C3E8 /* GuarantorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuarantorParser.swift; sourceTree = "<group>"; };
 		D1A35A54235623550057DD56 /* OkraWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OkraWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A35A57235623550057DD56 /* OkraWidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkraWidget.h; sourceTree = "<group>"; };
 		D1A35A58235623550057DD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +25,8 @@
 		D1A35A67235628D70057DD56 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		D1A35A69235629300057DD56 /* OkraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkraWebView.swift; sourceTree = "<group>"; };
 		D1A35A6B2356296A0057DD56 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FC0C353524581F1C000100BA /* OkraHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OkraHandler.swift; sourceTree = "<group>"; };
+		FC0C353B245823C2000100BA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,19 +40,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D75BEC72443676400C671B2 /* handlers */ = {
-			isa = PBXGroup;
-			children = (
-				5D75BEC82443679400C671B2 /* OkraHandler.swift */,
-			);
-			path = handlers;
-			sourceTree = "<group>";
-		};
 		D1A35A4A235623550057DD56 = {
 			isa = PBXGroup;
 			children = (
 				D1A35A56235623550057DD56 /* OkraWidget */,
 				D1A35A55235623550057DD56 /* Products */,
+				FC0C353A245823C2000100BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,7 +60,7 @@
 		D1A35A56235623550057DD56 /* OkraWidget */ = {
 			isa = PBXGroup;
 			children = (
-				5D75BEC72443676400C671B2 /* handlers */,
+				FC0C353424581F1C000100BA /* handlers */,
 				D1A35A66235628BC0057DD56 /* models */,
 				D1A35A63235628880057DD56 /* utils */,
 				D1A35A57235623550057DD56 /* OkraWidget.h */,
@@ -88,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				D1A35A642356289D0057DD56 /* OkraOptions.swift */,
-				5DA7CD142462556B0055C3E8 /* OkraOptionParser.swift */,
-				5DA7CD162462B6180055C3E8 /* GuarantorParser.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -98,9 +84,24 @@
 			isa = PBXGroup;
 			children = (
 				D1A35A67235628D70057DD56 /* Enums.swift */,
-				5DA7CD122461C7430055C3E8 /* Guarantor.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		FC0C353424581F1C000100BA /* handlers */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C353524581F1C000100BA /* OkraHandler.swift */,
+			);
+			path = handlers;
+			sourceTree = "<group>";
+		};
+		FC0C353A245823C2000100BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C353B245823C2000100BA /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,14 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA7CD172462B6180055C3E8 /* GuarantorParser.swift in Sources */,
-				5D75BEC92443679400C671B2 /* OkraHandler.swift in Sources */,
+				FC0C353624581F1C000100BA /* OkraHandler.swift in Sources */,
 				D1A35A62235628510057DD56 /* Okra.swift in Sources */,
 				D1A35A68235628D70057DD56 /* Enums.swift in Sources */,
 				D1A35A6A235629300057DD56 /* OkraWebView.swift in Sources */,
 				D1A35A652356289D0057DD56 /* OkraOptions.swift in Sources */,
-				5DA7CD132461C7430055C3E8 /* Guarantor.swift in Sources */,
-				5DA7CD152462556B0055C3E8 /* OkraOptionParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

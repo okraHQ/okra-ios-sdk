@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@objc final  class OkraHandler : NSObject {
+@objc final class OkraHandler: NSObject {
     private override init() {}
     @objc static var isDone: Bool = false
     @objc static var hasError: Bool = false
