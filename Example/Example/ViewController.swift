@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let okraOptions = OkraOptions(isWebview: true, key: "c81f3e05-7a5c-5727-8d33-1113a3c7a5e4", token: "5d8a35224d8113507c7521ac", products: ["auth","transactions"], env: "sandbox", clientName: "Basey")
+        let okraOptions = OkraOptions(isWebview: true, key: "c81f3e05-7a5c-5727-8d33-1113a3c7a5e4", token: "5d8a35224d8113507c7521ac", products: ["auth","transactions"], env: Environment.sandbox.rawValue, clientName: "Basey")
         Okra.create(baseController: self, okraOptions : okraOptions)
     }
 

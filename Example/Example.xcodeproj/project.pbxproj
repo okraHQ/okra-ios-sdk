@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0436C2D9AAFDAAC4B5CC8793 /* Pods_Example_ExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7F26DDDB378CB4DF21B3A2 /* Pods_Example_ExampleUITests.framework */; };
+		5D47664D2438F04700E63514 /* OkraWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47664B2438F03E00E63514 /* OkraWidget.framework */; };
+		5D47664E2438F04700E63514 /* OkraWidget.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D47664B2438F03E00E63514 /* OkraWidget.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D3728EA9D9119E72A7CECD31 /* Pods_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6734C2518D7E6F7BB3AE64D3 /* Pods_ExampleTests.framework */; };
 		D8B1DB4A2399595700F70193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1DB492399595700F70193 /* AppDelegate.swift */; };
 		D8B1DB4C2399595700F70193 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1DB4B2399595700F70193 /* SceneDelegate.swift */; };
@@ -17,8 +19,6 @@
 		D8B1DB562399595A00F70193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B1DB542399595A00F70193 /* LaunchScreen.storyboard */; };
 		D8B1DB612399595A00F70193 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1DB602399595A00F70193 /* ExampleTests.swift */; };
 		D8B1DB6C2399595A00F70193 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1DB6B2399595A00F70193 /* ExampleUITests.swift */; };
-		D8B1DB7B2399B65A00F70193 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DE9B4BD71F311751E98113 /* Pods_Example.framework */; };
-		D8B1DB7C2399B65A00F70193 /* Pods_Example.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91DE9B4BD71F311751E98113 /* Pods_Example.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D8B1DB7D2399B65A00F70193 /* Embed Frameworks */ = {
+		5D47664F2438F04700E63514 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D8B1DB7C2399B65A00F70193 /* Pods_Example.framework in Embed Frameworks */,
+				5D47664E2438F04700E63514 /* OkraWidget.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +56,7 @@
 		17205D74D66D0BDC2FDC9BE7 /* Pods-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleTests/Pods-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4416BF49F7DF01DC99B8F70C /* Pods-Example-ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-ExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Example-ExampleUITests/Pods-Example-ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		554E67DD467BEBDB04874DDB /* Pods-Example-ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-ExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-Example-ExampleUITests/Pods-Example-ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5D47664B2438F03E00E63514 /* OkraWidget.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OkraWidget.framework; sourceTree = "<group>"; };
 		6734C2518D7E6F7BB3AE64D3 /* Pods_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DE9B4BD71F311751E98113 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C47B4A9EEAAA691BD50F20 /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.release.xcconfig"; path = "Target Support Files/Pods-ExampleTests/Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B1DB7B2399B65A00F70193 /* Pods_Example.framework in Frameworks */,
+				5D47664D2438F04700E63514 /* OkraWidget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +135,7 @@
 		D8B1DB3D2399595700F70193 = {
 			isa = PBXGroup;
 			children = (
+				5D47664B2438F03E00E63514 /* OkraWidget.framework */,
 				D8B1DB482399595700F70193 /* Example */,
 				D8B1DB5F2399595A00F70193 /* ExampleTests */,
 				D8B1DB6A2399595A00F70193 /* ExampleUITests */,
@@ -196,8 +198,8 @@
 				D8B1DB422399595700F70193 /* Sources */,
 				D8B1DB432399595700F70193 /* Frameworks */,
 				D8B1DB442399595700F70193 /* Resources */,
-				D8B1DB7D2399B65A00F70193 /* Embed Frameworks */,
 				9578B322BB2B96ED82EC28ED /* [CP] Embed Pods Frameworks */,
+				5D47664F2438F04700E63514 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -602,6 +604,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -621,6 +627,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
