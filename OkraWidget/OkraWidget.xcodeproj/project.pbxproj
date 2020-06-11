@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D6D24F12492158A00321E3E /* Guarantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D24F02492158A00321E3E /* Guarantor.swift */; };
+		5D6D24F3249215D600321E3E /* OkraOptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D24F2249215D600321E3E /* OkraOptionParser.swift */; };
+		5D6D24F52492163600321E3E /* GuarantorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D24F42492163600321E3E /* GuarantorParser.swift */; };
 		D1A35A59235623550057DD56 /* OkraWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A35A57235623550057DD56 /* OkraWidget.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1A35A62235628510057DD56 /* Okra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A35A61235628510057DD56 /* Okra.swift */; };
 		D1A35A652356289D0057DD56 /* OkraOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A35A642356289D0057DD56 /* OkraOptions.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D6D24F02492158A00321E3E /* Guarantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guarantor.swift; sourceTree = "<group>"; };
+		5D6D24F2249215D600321E3E /* OkraOptionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkraOptionParser.swift; sourceTree = "<group>"; };
+		5D6D24F42492163600321E3E /* GuarantorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuarantorParser.swift; sourceTree = "<group>"; };
 		D1A35A54235623550057DD56 /* OkraWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OkraWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A35A57235623550057DD56 /* OkraWidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkraWidget.h; sourceTree = "<group>"; };
 		D1A35A58235623550057DD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				D1A35A642356289D0057DD56 /* OkraOptions.swift */,
+				5D6D24F2249215D600321E3E /* OkraOptionParser.swift */,
+				5D6D24F42492163600321E3E /* GuarantorParser.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -79,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A35A67235628D70057DD56 /* Enums.swift */,
+				5D6D24F02492158A00321E3E /* Guarantor.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -163,10 +172,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6D24F3249215D600321E3E /* OkraOptionParser.swift in Sources */,
 				D1A35A62235628510057DD56 /* Okra.swift in Sources */,
 				D1A35A68235628D70057DD56 /* Enums.swift in Sources */,
+				5D6D24F12492158A00321E3E /* Guarantor.swift in Sources */,
 				D1A35A6A235629300057DD56 /* OkraWebView.swift in Sources */,
 				D1A35A652356289D0057DD56 /* OkraOptions.swift in Sources */,
+				5D6D24F52492163600321E3E /* GuarantorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

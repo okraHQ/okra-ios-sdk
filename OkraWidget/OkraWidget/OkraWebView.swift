@@ -71,7 +71,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
         urlComponents.scheme = "https"
         urlComponents.host = "mobile.okra.ng"
         urlComponents.path = "/"
-        return urlComponents.url!;
+        return urlComponents.url!
     }
 }
 

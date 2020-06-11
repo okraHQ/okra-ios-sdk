@@ -5,7 +5,6 @@
 //  Created by Oto-obong Bassey Eshiett on 06/05/2020.
 //  Copyright © 2020 okra inc. All rights reserved.
 //
-
 import Foundation
 
 struct OkraOptionParser: Codable {
@@ -30,4 +29,3 @@ struct OkraOptionParser: Codable {
     var success_message: String
     var source : String = "ios"
 }
-

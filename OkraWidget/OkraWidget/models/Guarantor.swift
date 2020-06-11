@@ -5,7 +5,6 @@
 //  Created by Oto-obong Bassey Eshiett on 05/05/2020.
 //  Copyright © 2020 okra inc. All rights reserved.
 //
-
 import Foundation
 
 @objc public class Guarantor : NSObject {
