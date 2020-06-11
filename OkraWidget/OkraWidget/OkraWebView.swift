@@ -6,8 +6,6 @@
 //  Copyright © 2019 okra inc. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 import WebKit
 

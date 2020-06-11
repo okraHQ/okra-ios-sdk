@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		D8B1DB6C2399595A00F70193 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1DB6B2399595A00F70193 /* ExampleUITests.swift */; };
 		D8B1DB7B2399B65A00F70193 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DE9B4BD71F311751E98113 /* Pods_Example.framework */; };
 		D8B1DB7C2399B65A00F70193 /* Pods_Example.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91DE9B4BD71F311751E98113 /* Pods_Example.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FC0C35402458253E000100BA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0C353F2458253E000100BA /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		D8B1DB6B2399595A00F70193 /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		D8B1DB6D2399595A00F70193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8B1DB792399621300F70193 /* OkraWidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OkraWidget.h; path = ../OkraWidget/OkraWidget/OkraWidget.h; sourceTree = "<group>"; };
+		FC0C353F2458253E000100BA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FD7F26DDDB378CB4DF21B3A2 /* Pods_Example_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0C35402458253E000100BA /* WebKit.framework in Frameworks */,
 				D8B1DB7B2399B65A00F70193 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +126,7 @@
 		7E8DBB7B13CEB8BE2D17EA20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC0C353F2458253E000100BA /* WebKit.framework */,
 				D8B1DB792399621300F70193 /* OkraWidget.h */,
 				91DE9B4BD71F311751E98113 /* Pods_Example.framework */,
 				FD7F26DDDB378CB4DF21B3A2 /* Pods_Example_ExampleUITests.framework */,
