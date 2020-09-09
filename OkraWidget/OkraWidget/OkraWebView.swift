@@ -69,9 +69,8 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     func formatUrl() -> URL{
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
-        urlComponents.host = "mobile.okra.ng"
-        urlComponents.path = "/"
+        urlComponents.host = "v2-mobile.okra.ng"
+        urlComponents.path = "/mobile.html"
         return urlComponents.url!
     }
 }
-
