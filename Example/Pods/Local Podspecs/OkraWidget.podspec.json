@@ -1,0 +1,22 @@
+{
+  "name": "OkraWidget",
+  "version": "0.1.0",
+  "summary": "A short description of OkraWidget.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/boluok/OkraWidget",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "boluok": "Boluokunaiya@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/boluok/OkraWidget.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "OkraWidget/Classes/**/*"
+}

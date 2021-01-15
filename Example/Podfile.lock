@@ -1,0 +1,16 @@
+PODS:
+  - OkraWidget (0.1.0)
+
+DEPENDENCIES:
+  - OkraWidget (from `../`)
+
+EXTERNAL SOURCES:
+  OkraWidget:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OkraWidget: 5e7a1ef4d20cfdccc23e5d80f6aaaf61502e0bc2
+
+PODFILE CHECKSUM: e1b04970e8cf485bfc6021c06490bdddaa83aa2e
+
+COCOAPODS: 1.9.3
