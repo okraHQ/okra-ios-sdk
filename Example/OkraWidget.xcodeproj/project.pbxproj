@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EB7CBD425B1842D0053B7E2 /* Viewcontroller+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7CBD325B1842D0053B7E2 /* Viewcontroller+setup.swift */; };
 		27BCAA6CD13E64B3FD6870D0 /* Pods_OkraWidget_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E00A9B5D4F12B9A777165DE /* Pods_OkraWidget_Example.framework */; };
 		31A10AD3C0F5750D5695C219 /* Pods_OkraWidget_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210C5252443C8733FA33EF62 /* Pods_OkraWidget_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EB7CBD325B1842D0053B7E2 /* Viewcontroller+setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Viewcontroller+setup.swift"; sourceTree = "<group>"; };
 		210C5252443C8733FA33EF62 /* Pods_OkraWidget_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkraWidget_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35288EA5605A4BCA4A977BB8 /* Pods-OkraWidget_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkraWidget_Example.debug.xcconfig"; path = "Target Support Files/Pods-OkraWidget_Example/Pods-OkraWidget_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4E00A9B5D4F12B9A777165DE /* Pods_OkraWidget_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkraWidget_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,9 +44,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6BC0DB2D9DA61156EED199CA /* Pods-OkraWidget_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkraWidget_Tests.release.xcconfig"; path = "Target Support Files/Pods-OkraWidget_Tests/Pods-OkraWidget_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		79A5F71DB078222BE1E1FC4B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		88BFD74BFAFB41192F6D7822 /* OkraWidget.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = OkraWidget.podspec; path = ../OkraWidget.podspec; sourceTree = "<group>"; };
-		DC4461A74566A2A93D7B7AA3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		79A5F71DB078222BE1E1FC4B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		88BFD74BFAFB41192F6D7822 /* OkraWidget.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OkraWidget.podspec; path = ../OkraWidget.podspec; sourceTree = "<group>"; };
+		DC4461A74566A2A93D7B7AA3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F74649E6042759DBDBBE93A1 /* Pods-OkraWidget_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkraWidget_Example.release.xcconfig"; path = "Target Support Files/Pods-OkraWidget_Example/Pods-OkraWidget_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FD08DB429FB545F53224CAF8 /* Pods-OkraWidget_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkraWidget_Tests.debug.xcconfig"; path = "Target Support Files/Pods-OkraWidget_Tests/Pods-OkraWidget_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,7 +79,6 @@
 				FD08DB429FB545F53224CAF8 /* Pods-OkraWidget_Tests.debug.xcconfig */,
 				6BC0DB2D9DA61156EED199CA /* Pods-OkraWidget_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				1EB7CBD325B1842D0053B7E2 /* Viewcontroller+setup.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -227,6 +229,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				1EB7CBD425B1842D0053B7E2 /* Viewcontroller+setup.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -479,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OkraWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -494,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OkraWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
