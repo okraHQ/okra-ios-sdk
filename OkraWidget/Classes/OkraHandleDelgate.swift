@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol OkraHandlerDelegate {
+@objc public protocol OkraHandlerDelegate {
     func onSuccess(data:[String:Any])
     func onError(data:[String:Any])
     func onClose()

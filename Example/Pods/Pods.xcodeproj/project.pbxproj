@@ -10,6 +10,7 @@
 		0740A62DA70DE462434F6457C6099FF4 /* OkraWidget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BEE86E87C964C52226347E5A358C5E /* OkraWidget-dummy.m */; };
 		091CDE343D7C27BBE0A46956323DE61D /* OkraHandleDelgate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4B0D40F82A07ED8C81F1067374986 /* OkraHandleDelgate.swift */; };
 		09D9E0704FF208A2EB3DE3D91A7E0F80 /* OkraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD7D9D03434469430C0531B51502B /* OkraWebView.swift */; };
+		1EC5551D25B2C60E0007F726 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC5551C25B2C60E0007F726 /* WebKit.framework */; };
 		27D67E8343DB69D19082EC4947662BF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		27DA4936190295E6988CEFE773BC2117 /* Pods-OkraWidget_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 500F107DC989C44C383AE1C9A32A49E2 /* Pods-OkraWidget_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3731370E47ED6B4344DC7DD423D18ECC /* OkraOptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3387E78593537B79565E6411250A9 /* OkraOptionParser.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		13CFD75F4EBB35B83650D39F8CAB7C76 /* Pods-OkraWidget_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OkraWidget_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1613F09BB6CE10251337F919262E8757 /* Okra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Okra.swift; path = OkraWidget/Classes/Okra.swift; sourceTree = "<group>"; };
+		1EC5551C25B2C60E0007F726 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/iOSSupport/System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1FD4B0D40F82A07ED8C81F1067374986 /* OkraHandleDelgate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OkraHandleDelgate.swift; path = OkraWidget/Classes/OkraHandleDelgate.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		386CFD71A7F4A951CD324AE7D3B385EC /* Pods_OkraWidget_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkraWidget_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC5551D25B2C60E0007F726 /* WebKit.framework in Frameworks */,
 				27D67E8343DB69D19082EC4947662BF7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +193,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EC5551C25B2C60E0007F726 /* WebKit.framework */,
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
@@ -473,6 +477,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/System/iOSSupport/System/Library/Frameworks",
+				);
 				GCC_PREFIX_HEADER = "Target Support Files/OkraWidget/OkraWidget-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/OkraWidget/OkraWidget-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -728,6 +736,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/System/iOSSupport/System/Library/Frameworks",
+				);
 				GCC_PREFIX_HEADER = "Target Support Files/OkraWidget/OkraWidget-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/OkraWidget/OkraWidget-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

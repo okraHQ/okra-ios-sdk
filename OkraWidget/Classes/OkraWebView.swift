@@ -17,11 +17,15 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     
     public var baseController : UIViewController?
     
-    public var okraHandlerDelegate:OkraHandlerDelegate?
+    public var okraHandlerDelegate:OkraHandlerDelegate!
     
     var linkOptions = [String: String]()
     
 
+    
+    
+    let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    
     @IBOutlet var web: WKWebView!
     
     override func loadView() {
@@ -33,14 +37,23 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let request = URLRequest(url: formatUrl())
+        let url = URL(string: "https://mobile.okra.ng/".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+        let request = URLRequest(url: url)
         web.load(request)
         web.navigationDelegate = self
+        setUpActivityIndicator()
+    }
+    
+    func setUpActivityIndicator()  {
+        indicator.center = web.center
+        indicator.hidesWhenStopped = true
+        web.addSubview(indicator)
+        indicator.startAnimating()
     }
     
     func webView(_ webView: WKWebView, didFinish  navigation: WKNavigation!)
     {
+        indicator.stopAnimating()
         do{
             let okraOptionsEncoded = okraOptions.encode()
             let jsonEncoder = JSONEncoder()
@@ -53,16 +66,18 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if(message.name == "jsMessageHandler") {
             
-              NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onSuccess"), object: ["data": message.body as! String])
-            
+            let dataString = message.body as! String
+            let dataDictionary = convertToDictionary(text: dataString)
+            okraHandlerDelegate.onSuccess(data: dataDictionary ?? [:])
             
         }else if(message.name == "jsErrorMessageHandler"){
         
-             NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onError"), object: ["data": message.body as! String])
-            
+            let dataString = message.body as! String
+            let dataDictionary = convertToDictionary(text: dataString)
+            okraHandlerDelegate.onError(data: dataDictionary ?? [:])
         }else if(message.name == "jsCloseMessageHandler"){
 
-             NotificationCenter.default.post(name: Notification.Name(rawValue: "okra.onClose"), object: ["data": message.body as! String])
+            okraHandlerDelegate.onClose()
         }
         switchToPreviousPage();
     }
@@ -71,13 +86,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
         self.dismiss(animated: true, completion: nil)
     }
     
-    func formatUrl() -> URL{
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "mobile.okra.ng"
-        urlComponents.path = "/"
-        return urlComponents.url!
-    }
+  
 }
 
 
