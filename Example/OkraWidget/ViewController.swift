@@ -22,7 +22,7 @@ class ViewController: UIViewController,OkraHandlerDelegate {
     
     @objc func showExample(){
         
-    let okraOptions = OkraOptions(isWebview: true, key: "fa85e5ce-0e4e-5a88-883d-9ba9b4357683", token: "5da6358130a943486f33dced", products: ["auth","transactions"], env: Environment.production.rawValue, clientName: "Basey")
+    let okraOptions = OkraOptions(isWebview: true, key: "key", token: "token", products: ["auth","transactions"], env: Environment.production.rawValue, clientName: "Basey")
         Okra.create(baseController: self, okraOptions : okraOptions, okraHandlerDelegate: self)
         
     }
