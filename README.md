@@ -1,5 +1,5 @@
 <p align="center">
-   <img title="Okra" height="200" src="https://github.com/okraHQ/okra-ios-sdk/blob/master/OkraWidget/Assets/circle-logo.png" width="35%"/>
+   <img title="Okra" height="200" src="https://github.com/okraHQ/okra-ios-sdk/blob/master/OkraWidget/Assets/circle-logo.png" width="30%"/>
 </p>
 
 # okra-ios-sdk
