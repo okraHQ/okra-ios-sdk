@@ -24,7 +24,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
 
     
     
-    let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    let indicator = UIActivityIndicatorView(style: .gray)
     
     @IBOutlet var web: WKWebView!
     
