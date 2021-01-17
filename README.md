@@ -1,3 +1,7 @@
+<p align="center">
+   <img title="Okra" height="200" src="https://github.com/okraHQ/okra-ios-sdk/blob/master/OkraWidget/Assets/circle-logo.png" width="35%"/>
+</p>
+
 # okra-ios-sdk
 **Okra iOS SDK** allows you add Okra widget to you native ios app in no time. 
 
