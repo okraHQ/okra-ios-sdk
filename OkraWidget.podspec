@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OkraWidget"
-  spec.version      = "4.0.2"
+  spec.version      = "4.0.3"
   spec.summary      = "This is the Okra ios widget."
   spec.description  = "This framework allows you to integrate the Okra widget into your ios application in no time."
   spec.homepage     = "https://github.com/okraHQ/okra-ios-sdk"
