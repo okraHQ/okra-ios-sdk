@@ -27,10 +27,19 @@ let okraOptions = OkraOptions(isWebview: true, key: "key", token: "token", produ
 OkraWidget is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile and run `pod install`:
  
+ - Simply add the following line to your <code>Podfile</code>
+```ruby
+  pod 'OkraWidget'
 ```
-pod 'OkraWidget'
+
+- Run command
 ```
- 
+  pod install
+```
+- Write Import statement on your source file
+```swift
+  import OkraWidget
+```
  
  ### The Basis Of Usage
 
