@@ -18,7 +18,7 @@ public extension UIColor {
 
         if hex.hasPrefix("#") {
             let index   = hex.index(hex.startIndex, offsetBy: 1)
-            hex         = hex.substring(from: index)
+            hex         = String(hex[index...])
         }
 
         let scanner = Scanner(string: hex)
@@ -50,5 +50,13 @@ public extension UIColor {
             print("Scan hex error")
         }
         self.init(red:red, green:green, blue:blue, alpha:alpha)
+    }
+}
+
+
+extension URL {
+    func valueOf(_ queryParamaterName: String) -> String? {
+        guard let url = URLComponents(string: self.absoluteString) else { return nil }
+        return url.queryItems?.first(where: { $0.name == queryParamaterName })?.value
     }
 }

@@ -13,17 +13,15 @@ import WebKit
 
 class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegate {
     
-    public var okraOptions: OkraOptions!
+    public var dataDictionary: [String:Any]!
     
     public var baseController : UIViewController?
     
     public var okraHandlerDelegate:OkraHandlerDelegate!
     
     var linkOptions = [String: String]()
-    
-
-    
-    
+    var isSuccesful = false
+    var data:[String:Any] = [:]
     let indicator = UIActivityIndicatorView(style: .gray)
     
     @IBOutlet var web: WKWebView!
@@ -41,6 +39,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
         let request = URLRequest(url: url)
         web.load(request)
         web.navigationDelegate = self
+        web.addObserver(self, forKeyPath: "URL", options: .new, context: nil)
         setUpActivityIndicator()
     }
     
@@ -54,13 +53,14 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     func webView(_ webView: WKWebView, didFinish  navigation: WKNavigation!)
     {
         indicator.stopAnimating()
-        do{
-            let okraOptionsEncoded = okraOptions.encode()
-            let jsonEncoder = JSONEncoder()
-            let jsonData = try jsonEncoder.encode(okraOptionsEncoded)
-            let json = String(data: jsonData, encoding: String.Encoding.utf8)
-            web.evaluateJavaScript("openOkraWidget('"+json!+"')", completionHandler: { (object,error) in})
-        }catch{}
+        if let theJSONData = try?  JSONSerialization.data(
+            withJSONObject: dataDictionary ?? [:],
+            options: .sortedKeys
+              ),
+              let json = String(data: theJSONData,
+                                       encoding: String.Encoding.utf8) {
+            web.evaluateJavaScript("openOkraWidget('"+json+"')", completionHandler: { (object,error) in})
+            }
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -68,22 +68,43 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
             
             let dataString = message.body as! String
             let dataDictionary = convertToDictionary(text: dataString)
-            okraHandlerDelegate.onSuccess(data: dataDictionary ?? [:])
+            isSuccesful = true
+            data = dataDictionary ?? [:]
             
         }else if(message.name == "jsErrorMessageHandler"){
         
             let dataString = message.body as! String
             let dataDictionary = convertToDictionary(text: dataString)
-            okraHandlerDelegate.onError(data: dataDictionary ?? [:])
+            isSuccesful = false
+            data = dataDictionary ?? [:]
         }else if(message.name == "jsCloseMessageHandler"){
 
             okraHandlerDelegate.onClose()
         }
-        switchToPreviousPage();
     }
     
     func switchToPreviousPage(){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let key = change?[NSKeyValueChangeKey.newKey] {
+            let url = key as? URL
+            let shouldClose = url?.valueOf("shouldClose")
+            if(shouldClose == "true"){
+                if(isSuccesful){
+                    okraHandlerDelegate.onSuccess(data: data)
+                }else{
+                    okraHandlerDelegate.onError(data: data)
+                }
+                switchToPreviousPage()
+            }
+        }
+    }
+    
+    func getQueryStringParameter(url: String, param: String) -> String? {
+      guard let url = URLComponents(string: url) else { return nil }
+      return url.queryItems?.first(where: { $0.name == param })?.value
     }
     
   
