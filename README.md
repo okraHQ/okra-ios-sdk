@@ -1,26 +1,85 @@
+<p align="center">
+   <img title="Okra" height="200" src="https://github.com/okraHQ/okra-ios-sdk/blob/master/OkraWidget/Assets/circle-logo.png" width="30%"/>
+</p>
+
 # okra-ios-sdk
+**Okra iOS SDK** allows you add Okra widget to you native ios app in no time. 
 
-This is an ios library for implementing okra widget
-### Get Started
-This library would help you add Okra widget to you native ios app in no time.
-### Install
+## Example
+ 
+ To run the example project, clone the repo, and open `OkraWidget.xcworkspace` in the Example directory with **Xcode**, run and build and you are good to go!
+ 
+1. If you don’t have an account, sign up for an [Okra account](https://dash.okra.ng/register).
+2. In `Viewcontroller.swift` put the key and token you get from your Okra dashboard
 
-1. Clone the repository and save to a location:
-```git
-$ git clone https://github.com/okraHQ/okra-ios-sdk.git
 ```
-2. Build and run the project via **Xcode** this creates a library build named "OkraWidget.framework" in the Products folder located at the root directory. 
-
-3. Copy the file OkraWidget.framework to the root directory of the project you want to use it in.
-
-4. Go to project > General > Frameworks,Libraries, and Embedded Content and add the "OkraWidget.framework"
-
-### Usage
-``` swift
-//Okra.create() static method takes in a UIViewController parameter and also and OkraOption parameter
-let okraOptions = OkraOptions(isWebview: true, key: "c81f3e05-7a5c-5727-8d33-1113a3c7a5e4", token: "5d8a35224d8113507c7521ac", products: ["auth","transactions"], env: Environment.sandbox, clientName: "Basey")
-Okra.create(baseController: self, okraOptions : okraOptions)
+let okraOptions = OkraOptions(isWebview: true, key: "key", token: "token", products: ["auth","transactions"], env: Environment.production.rawValue, clientName: "Basey")
+        Okra.create(baseController: self, okraOptions : okraOptions, okraHandlerDelegate: self)
 ```
+
+## Development Requirements
+- iOS 11.0+
+- Swift: 5.1
+- Xcode Version: 10.0+
+
+## Installation
+ 
+OkraWidget is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile and run `pod install`:
+ 
+ - Simply add the following line to your <code>Podfile</code>
+```ruby
+  pod 'OkraWidget'
+```
+
+- Run command
+```
+  pod install
+```
+- Write Import statement on your source file
+```swift
+  import OkraWidget
+```
+ 
+ ### The Basis Of Usage
+
+```swift
+
+import OkraWidget
+class ViewController: UIViewController,OkraHandlerDelegate {
+    
+    
+    
+    let launchButton = UIButton(type: .system)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpConstraintsAndProperties()
+    }
+    
+    @objc func showExample(){
+        
+    let okraOptions = OkraOptions(isWebview: true, key: "key", token: "token", products: ["auth","transactions"], env: Environment.production.rawValue, clientName: "Basey")
+        Okra.create(baseController: self, okraOptions : okraOptions, okraHandlerDelegate: self)
+        
+    }
+    
+    func onSuccess(data: [String : Any]) {
+        print("Succesfully connected bank \(data)")
+    }
+    
+    func onError(data: [String : Any]) {
+        print("Error Receieved \(data)")
+    }
+    
+    func onClose() {
+        print("Closed")
+    }
+  
+}
+
+```
+ 
 
 ## OkraOptions
 
