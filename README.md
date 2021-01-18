@@ -12,9 +12,32 @@
 1. If you don’t have an account, sign up for an [Okra account](https://dash.okra.ng/register).
 2. In `Viewcontroller.swift` put the key and token you get from your Okra dashboard
 
-```
-let okraOptions = OkraOptions(isWebview: true, key: "key", token: "token", products: ["auth","transactions"], env: Environment.production.rawValue, clientName: "Basey")
-        Okra.create(baseController: self, okraOptions : okraOptions, okraHandlerDelegate: self)
+```swift
+   let dataDictionary:[String:Any] = ["isWebview":true,
+                                           "key":"key",
+                                           "token":"token",
+                                           "products": ["auth","transactions"],
+                                           "env":Environment.production.rawValue,
+                                           "clientName":"Basey",
+                                           "source":"ios",
+                                           "color":"#953ab7",
+                                           "limit":"24",
+                                           "guarantors":guarantor,
+                                           "corporate":false,
+                                           "connectMessage":"Which account do you want to connect with?",
+                                           "callback_url":"",
+                                           "redirect_url":"",
+                                           "logo":"https://cdn.okra.ng/images/icon.svg",
+                                           "widget_success":"Your account was successfully linked to Okra, Inc",
+                                           "widget_failed":"Which account do you want to connect with?",
+                                           "currency":"NGN",
+                                           "exp":"2021-08-06",
+                                           "manual":false,
+                                           "success_title":"Successfully connect bank",
+                                           "success_message":"You have successfully connected your bank account"
+        ]
+        
+        Okra.create(baseController: self, dataDictionary: dataDictionary, okraHandlerDelegate: self)
 ```
 
 ## Development Requirements
