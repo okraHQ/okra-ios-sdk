@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045CBB9D25C829F60025AB9F /* Extention + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBB9C25C829F60025AB9F /* Extention + String.swift */; };
 		0740A62DA70DE462434F6457C6099FF4 /* OkraWidget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BEE86E87C964C52226347E5A358C5E /* OkraWidget-dummy.m */; };
 		091CDE343D7C27BBE0A46956323DE61D /* OkraHandleDelgate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4B0D40F82A07ED8C81F1067374986 /* OkraHandleDelgate.swift */; };
 		09D9E0704FF208A2EB3DE3D91A7E0F80 /* OkraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD7D9D03434469430C0531B51502B /* OkraWebView.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045CBB9C25C829F60025AB9F /* Extention + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + String.swift"; sourceTree = "<group>"; };
 		13CFD75F4EBB35B83650D39F8CAB7C76 /* Pods-OkraWidget_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OkraWidget_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1613F09BB6CE10251337F919262E8757 /* Okra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Okra.swift; path = OkraWidget/Classes/Okra.swift; sourceTree = "<group>"; };
 		1EC5551C25B2C60E0007F726 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/iOSSupport/System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -258,6 +260,7 @@
 				62F0DB3B6469D8E6904296704DA4B5A1 /* GuarantorParser.swift */,
 				ECB3387E78593537B79565E6411250A9 /* OkraOptionParser.swift */,
 				6E4165EA227BD0158D2D696928192771 /* OkraOptions.swift */,
+				045CBB9C25C829F60025AB9F /* Extention + String.swift */,
 			);
 			name = utils;
 			path = OkraWidget/Classes/utils;
@@ -435,6 +438,7 @@
 				AA911A6C7489F680CA35C633C72E33AC /* OkraOptions.swift in Sources */,
 				09D9E0704FF208A2EB3DE3D91A7E0F80 /* OkraWebView.swift in Sources */,
 				0740A62DA70DE462434F6457C6099FF4 /* OkraWidget-dummy.m in Sources */,
+				045CBB9D25C829F60025AB9F /* Extention + String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

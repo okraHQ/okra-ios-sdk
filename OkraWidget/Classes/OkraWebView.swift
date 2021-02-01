@@ -112,7 +112,7 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
 
 
 func convertToDictionary(text: String) -> [String: Any]? {
-    if let data = text.data(using: .utf8) {
+    if let data = cleanString(text: text).data(using: .utf8) {
         do {
             return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
         } catch {
@@ -120,4 +120,13 @@ func convertToDictionary(text: String) -> [String: Any]? {
         }
     }
     return nil
+}
+
+private func cleanString(text:String) -> String{
+    let defaultingString = text.slice(from:"v2_icon\":\"", to: "\",\"png_logo\"") ?? ""
+    if((defaultingString.contains("</svg>")) == true){
+        let parsed = text.replacingOccurrences(of: defaultingString, with: "")
+        return parsed
+    }
+    return text
 }

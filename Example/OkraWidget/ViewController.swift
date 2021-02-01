@@ -18,7 +18,10 @@ class ViewController: UIViewController,OkraHandlerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpConstraintsAndProperties()
+       
     }
+    
+   
     
     @objc func showExample(){
 
@@ -50,6 +53,8 @@ class ViewController: UIViewController,OkraHandlerDelegate {
         
         Okra.create(baseController: self, dataDictionary: dataDictionary, okraHandlerDelegate: self)
         
+
+        
     }
     
     func onSuccess(data: [String : Any]) {
@@ -65,3 +70,4 @@ class ViewController: UIViewController,OkraHandlerDelegate {
     }
   
 }
+
