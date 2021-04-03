@@ -1,16 +1,23 @@
-<p align="center">
-   <img title="Okra" height="200" src="https://github.com/okraHQ/okra-ios-sdk/blob/master/OkraWidget/Assets/circle-logo.png" width="30%"/>
-</p>
+# Okra Widget iOS SDK
+![alt text](https://files.readme.io/f0c57b5-ios-black.svg)
 
-# okra-ios-sdk
-**Okra iOS SDK** allows you add Okra widget to you native ios app in no time. 
+iOS SDK for implementing the Okra widget - Okra is a safe and secure web drop-in module and this library provides a front-end web (also available in [Android](https://github.com/okraHQ/okra-android-sdk) and [JavaScript](https://github.com/okraHQ/okra-js)) SDK for [account authentication](https://docs.okra.ng/docs/widget-properties) and [payment initiation](https://docs.okra.ng/docs/creating-a-charge) for each bank that Okra [supports](https://docs.okra.ng/docs/bank-coverage). 
+
+## Try the demo
+Checkout the [widget flow](https://okra.ng/) to view how the Okra Widget works. *Click "See How it Works"*
+
+## Before getting started
+- Checkout our [get started guide](https://docs.okra.ng/docs/get-started-with-okra) to create your developer account and retrieve your Client Token, API Keys, and Private Keys.
+- Create a [sandbox customer](https://docs.okra.ng/docs/creating-sandbox-customers), so you can get connecting immediately. 
+
+*Bonus Points*
+- Setup [Slack Notifications](https://docs.okra.ng/docs/slack-integration) so you can see your API call statuses and re-run calls in real-time!
 
 ## Example
  
  To run the example project, clone the repo, and open `OkraWidget.xcworkspace` in the Example directory with **Xcode**, run and build and you are good to go!
  
-1. If you don’t have an account, sign up for an [Okra account](https://dash.okra.ng/register).
-2. In `Viewcontroller.swift` put the key and token you get from your Okra dashboard
+- In `Viewcontroller.swift` put the key and token you get from your Okra dashboard
 
 ```swift
    let dataDictionary:[String:Any] = ["isWebview":true,
@@ -177,10 +184,14 @@ class ViewController: UIViewController,OkraHandlerDelegate {
 |  `isWebview `         | `boolean`      | true                |  true               | 
 |  `key `               | `String`       | true                |  undefined          | Your public key from Okra.
 |  `token`              | `String`       | true                |  undefined          | Your client token key from Okra.
+|  `payment`            | `Booelan`      | false               |                     | Whether you want to initiate a payment (https://docs.okra.ng/docs/payments)
+|  `charge `            | `Object`       | false               |                     | Payment charge opject (https://docs.okra.ng/docs/creating-a-charge)
 |  `products`           | `ArrayList<Enums.Product>`| true     |  undefined          | The Okra products you want to use with the widget.
 |  `env`                | `Enums.Environment`| true            |  undefined          | 
 |  `clientName`         | `String`       | true                |  undefined          | Name of the customer using the widget on the application
 |  `webhook`            | `String`       | true                |  undefined          | The Url that Okra send the client's data to.
+
+View a complete list of customizable options [here](https://docs.okra.ng/docs/widget-properties)
 
 ## Data Dictionary
 
@@ -279,3 +290,9 @@ Field | Required | Description
 **actions**<br>`Array of String` | **Yes** | Actions mentioned within the desc
 **subject**<br>`Array of String` | **Yes** | Subject of the desc
 **preposition**<br>`Array of String` | **Yes** | Prepositions within desc to understand intent
+
+## Done connecting?
+Checkout our [API Overiview](https://docs.okra.ng/docs/api-overview) and see how to use the data you've received and [other products](https://docs.okra.ng/docs/selfie-verification) you can use to create more personalized experiences for your customers!
+
+## Not a developer? 
+Get started without writing a single line of code, Try our App Builder! [Click here to get started](https://dash.okra.ng/link-builder)
