@@ -20,13 +20,23 @@ extension ViewController {
     func addAllViews(){
         view.addSubview(launchButton)
         
-        NSLayoutConstraint.activate([
-            launchButton.heightAnchor.constraint(equalToConstant: 50),
-            launchButton.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            launchButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            launchButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
-  
-        ])
+        if #available(iOS 11.0, *) {
+            NSLayoutConstraint.activate([
+                launchButton.heightAnchor.constraint(equalToConstant: 50),
+                launchButton.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+                launchButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+                launchButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+                
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                launchButton.heightAnchor.constraint(equalToConstant: 50),
+                launchButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                launchButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                launchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+                
+            ])
+        }
     }
     
     func setupLaunchButton(){

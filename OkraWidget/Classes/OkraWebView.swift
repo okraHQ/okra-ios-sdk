@@ -41,6 +41,19 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
         web.navigationDelegate = self
         web.addObserver(self, forKeyPath: "URL", options: .new, context: nil)
         setUpActivityIndicator()
+        disableZoom()
+    }
+    
+    
+    func disableZoom(){
+        let source: String = "var meta = document.createElement('meta');" +
+            "meta.name = 'viewport';" +
+            "meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';" +
+            "var head = document.getElementsByTagName('head')[0];" +
+            "head.appendChild(meta);"
+
+        let script: WKUserScript = WKUserScript(source: source, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        web.configuration.userContentController.addUserScript(script)
     }
     
     func setUpActivityIndicator()  {
@@ -53,28 +66,38 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
     func webView(_ webView: WKWebView, didFinish  navigation: WKNavigation!)
     {
         indicator.stopAnimating()
-        if let theJSONData = try?  JSONSerialization.data(
-            withJSONObject: dataDictionary ?? [:],
-            options: .sortedKeys
-              ),
-              let json = String(data: theJSONData,
-                                       encoding: String.Encoding.utf8) {
-            web.evaluateJavaScript("openOkraWidget('"+json+"')", completionHandler: { (object,error) in})
+        if #available(iOS 11.0, *) {
+            if let theJSONData = try?  JSONSerialization.data(
+                withJSONObject: dataDictionary ?? [:],
+                options: .sortedKeys
+            ),
+            let json = String(data: theJSONData,
+                              encoding: String.Encoding.utf8) {
+                web.evaluateJavaScript("openOkraWidget('"+json+"')", completionHandler: { (object,error) in})
             }
+        } else {
+            if let theJSONData = try?  JSONSerialization.data(
+                withJSONObject: dataDictionary ?? [:]
+            ),
+            let json = String(data: theJSONData,
+                              encoding: String.Encoding.utf8) {
+                web.evaluateJavaScript("openOkraWidget('"+json+"')", completionHandler: { (object,error) in})
+            }
+        }
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if(message.name == "jsMessageHandler") {
             
             let dataString = message.body as! String
-            let dataDictionary = convertToDictionary(text: dataString)
+            let dataDictionary = formatJson(text: dataString)
             isSuccesful = true
             data = dataDictionary ?? [:]
             
         }else if(message.name == "jsErrorMessageHandler"){
         
             let dataString = message.body as! String
-            let dataDictionary = convertToDictionary(text: dataString)
+            let dataDictionary = formatJson(text: dataString)
             isSuccesful = false
             data = dataDictionary ?? [:]
         }else if(message.name == "jsCloseMessageHandler"){
@@ -110,6 +133,16 @@ class OkraWebView: UIViewController, WKScriptMessageHandler, WKNavigationDelegat
   
 }
 
+func formatJson(text: String) -> [String: Any]? {
+    if let data = text.data(using: .utf8) {
+        do {
+            return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+        } catch {
+           return convertToDictionary(text: text)
+        }
+    }
+    return nil
+}
 
 func convertToDictionary(text: String) -> [String: Any]? {
     if let data = cleanString(text: text).data(using: .utf8) {
