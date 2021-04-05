@@ -48,7 +48,7 @@ Checkout the [widget flow](https://okra.ng/) to view how the Okra Widget works. 
 ```
 
 ## Development Requirements
-- iOS 11.0+
+- iOS 10.0+
 - Swift: 5.1
 - Xcode Version: 10.0+
 
